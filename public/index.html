@@ -9,6 +9,14 @@
 <body>
    <h1>Welcome to app</h1>
 
+   <ul id="message"></ul>
+
+   <form id="form-message" method="POST">
+      <input type="text" name="text">
+      <button type="submit">Submit</button>
+   </form>
+   <button id="send-location">Send Location</button>
+
    <script src="/socket.io/socket.io.js"></script>
    <script src="/js/index.js"></script>
 </body>

@@ -30,6 +30,10 @@ io.on('connection', (socket) => {
       io.emit('newMessage', generateMessage(message.from, message.text));
    });
 
+   socket.on('getLocation', (location) => {
+      io.emit('newMessage', generateMessage('Admin', `${location.lat}, ${location.long}`));
+   });
+
    socket.on('disconnect', () => {
       console.log('User was disconnected');
    });
